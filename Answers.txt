@@ -1,0 +1,23 @@
+Question 1 How do you specify a TCP socket in Python?
+
+We do that using the socket module's socket class to create a socket object
+
+Question 2 What is the difference between a client socket and a server socket in Python?
+
+Client socket connects to a listening server. Server socket is there to listen for a connection from the client while binding to a port.
+
+Question 3 How do we instruct the OS to let us reuse the same bind port?
+
+Using socket.SO_REUSEADDR in the setsockopt method for the socket object. e.g. s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+Question 4 What information do we get about incoming connections?
+
+We get the address, i.e. IP and Port, bound to the socket on the other end of the connection, i.e. ('127.0.0.1', 33598)
+
+Question 5 What is returned by recv() from the server after it is done sending the HTTP request?
+
+The google homepage was returned in form of bytestring.
+
+Question 6
+
+https://github.com/ismaeelBM/CMPUT404Lab2
